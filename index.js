@@ -116,7 +116,7 @@ async function run() {
 
         app.delete('/data/:id', async (req, res) => {
             const id = req.params.id;
-            console.log("Please delete from database", id);
+            console.log("Please Delete from database", id);
             const query = { _id: new ObjectId(id) }
             const result = await assignmentDataCollection.deleteOne(query)
             res.send(result)
